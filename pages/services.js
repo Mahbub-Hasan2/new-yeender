@@ -127,7 +127,7 @@ const services = ({ data }) => (
                         <div className="left_side card p-5">
                             <h3>Web Design</h3>
                             <p>
-                                If you own a weak website, visitors won&apos;t take your words seriously. Make your website as strong as possible via custom web designing. Yeender is blessed with professional web designers to satisfy clients accordingly. We'll take care of your website&apos;s User interface (UI) & User experience (UX) to make them more user-friendly.
+                                If you own a weak website, visitors won&apos;t take your words seriously. Make your website as strong as possible via custom web designing. Yeender is blessed with professional web designers to satisfy clients accordingly. We&apos;ll take care of your website&apos;s User interface (UI) & User experience (UX) to make them more user-friendly.
                                 <br /><br />
                                 If you want us to make a website for you from scratch, we can do that as well. You just need to ask; the rest is our responsibility. <br /><br />
                                 Firstly, we need to inspect your existing website design. We&apos;ll show you the issues & the SEO impact on your website due to the design. Later on, we will make several proposals for you regarding the design. After confirming your order, our experts will deliver your new or improved design within the deadline.
