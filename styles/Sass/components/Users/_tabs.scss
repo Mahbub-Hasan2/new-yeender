@@ -1,0 +1,34 @@
+@import "../../utilities/variables";
+
+#user_p_tabs_area {
+  .tabs_and_content {
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .nav-link {
+        text-align: center;
+        line-height: 20px;
+        text-transform: capitalize;
+        padding: 10px 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: $warning;
+        span {
+          font-weight: 900;
+          font-size: 22px;
+        }
+      }
+      .active {
+        border-bottom: 3px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  .tabs_contents{
+    background: $light;
+  }
+}

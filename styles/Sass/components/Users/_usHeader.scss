@@ -1,0 +1,41 @@
+@import "../../utilities/mixins";
+@import "../../utilities/variables";
+
+#U_p_Header_area {
+    font-family: "Roboto", sans-serif;
+  .U_p_Header_bg {
+    height: 200px;
+    background-image: url("https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  text-align: center;
+
+  .U_p_Header_info {
+    position: relative;
+    top: -70px;
+    .img {
+      height: 110px;
+      width: 110px;
+      margin: 0 auto;
+      background: red;
+      border: 6px solid #fff;
+      border-radius: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+    .country{
+        color: $silver;
+    }
+    .description{
+        font-family: "Poppins", "Hind Siliguri", sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+  }
+}

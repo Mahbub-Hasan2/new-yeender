@@ -1,0 +1,17 @@
+@import "../utilities/variables";
+
+#c_s_Navbar_area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.6s;
+  z-index: 900;
+  .nav-item {
+    .nav-link {
+      padding: 7px 15px;
+      font-weight: 700;
+      color: $fontColor;
+      font-family: "Poppins", "Hind Siliguri", sans-serif;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../utilities/mixins";
+@import "../../utilities/variables";
+
+#C_about_solution_component_area {
+    padding: 50px 0px;
+    @extend .container;
+  }
+  
+  @media (max-width: 640px) {
+    #C_about_solution_component_area {
+      padding: 10px 0px;
+      .col-md {
+        h3 {
+          font-size: 22px;
+          line-height: 29px;
+          padding-top: 20px;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
