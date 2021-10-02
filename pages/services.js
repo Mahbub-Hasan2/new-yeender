@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+// import dynamic from 'next/dynamic';
+// import Head from 'next/head';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+// import { Col, Row } from 'react-bootstrap';
 import yeenderServer from '../serverConfig';
 
 
 const services = ({ data }) => (
     <div>
-        <Head>
+        {/* <Head>
             <meta charSet="utf-8" />
             <meta name="description" content="Yeender is a one spot digital solution Canadian-based company. We specialize in web development, web design, digital marketing, and graphic design. Working together with businesses and individuals to fulfill their needs." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -136,7 +136,7 @@ const services = ({ data }) => (
                     </Col>
                 </Row>
             </div>
-        </div>
+        </div> */}
 
     </div>
 );

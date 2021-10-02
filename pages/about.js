@@ -17,11 +17,12 @@ const Solution = dynamic(() => import('../components/AboutUs/Solution'), {
 
 const about = ({ data }) => (
     <>
-        <AboutUs data={data} />
+        {/* <AboutUs data={data} />
         <Solution />
         <ChooseUe />
         <Vision/>
-        <Offer />
+        <Offer /> */}
+        s
     </>
 );
 
