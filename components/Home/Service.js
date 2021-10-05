@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import ServiceCard from '../ShareComponents/cards/ServiceCard';
 
 const Services = ({ data }) => {
     // const activeRouter = useRouter();
@@ -18,18 +19,7 @@ const Services = ({ data }) => {
                     <Row className="justify-content-center">
                         {service.map((data, index) => (
                             <Col key={index} md="4" sm="6">
-                                <div className="service_cards card text-center">
-                                    <div style={{ background: '#DCDEFF' }}>
-                                        <img
-                                            className="img-fluid"
-                                            src={data.img ? data.img : "https://i.imgur.com/R6YBPIO.png"}
-                                            alt={data.title ? data.title : "service"}
-                                        />
-                                    </div>
-                                    <h4>
-                                        {data.title ? data.title : "..."}
-                                    </h4>
-                                </div>
+                                <ServiceCard data={data} />
                             </Col>
                         ))}
                     </Row>

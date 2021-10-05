@@ -1,0 +1,35 @@
+// just service cards styles
+#service_card_patent_style {
+  margin: 10px 0px;
+  transition: 0.3s;
+  cursor: pointer;
+  h4 {
+    margin-top: 20px;
+    font-weight: 800;
+    color: #1f4262;
+  }
+  padding: 40px 10px;
+  div {
+    width: 23%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 100px;
+  }
+
+  img {
+    position: relative;
+    left: 25px;
+    // width: 20%;
+    margin: 0 auto;
+  }
+}
+#service_card_patent_style:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 558px) {
+  #service_card_patent_style {
+    border-radius: 20px;
+    box-shadow: 2px 1px 10px 2px rgb(206, 206, 206);
+    margin: 10px 15px !important;
+  }
+}

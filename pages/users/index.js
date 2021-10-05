@@ -1,7 +1,11 @@
 import React from 'react';
+import Orders from '../../components/Users/Orders';
 import Header from '../../components/Users/USHeader';
+import { UserContext } from '../../Layout/Layout';
 
-const index = () => {
+const Users = () => {
+    const { service, setService } = React.useContext(UserContext);
+
     return (
         <>
             <Header />
@@ -24,7 +28,7 @@ const index = () => {
                                             aria-selected="true"
                                         >
 
-                                            <span className="mb-5">33</span>
+                                            <span className="mb-5">{service.length}</span>
                                             <br />
                                             orders
                                         </a>
@@ -75,7 +79,7 @@ const index = () => {
                     {/* <!-- Tabs content --> */}
                     <div className="tab-content" id="ex1-content">
                         <div className="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                            Tab 1 content
+                            <Orders/>
                         </div>
                         <div className="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                             Tab 2 content
@@ -91,4 +95,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Users;

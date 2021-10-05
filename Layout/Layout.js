@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     const [ourAbout, setOurAbout] = useState({});
     const [loggedInUser, setLoggedInUser] = useState({});
     const [projects, setProjects] = useState([]);
+    const [service, setService] = useState([]);
     const [categories, setCategories] = useState("");
 
     return (
@@ -23,6 +24,8 @@ const Layout = ({ children }) => {
                 setLoggedInUser,
                 projects,
                 setProjects,
+                service, 
+                setService,
                 categories,
                 setCategories
             }}
