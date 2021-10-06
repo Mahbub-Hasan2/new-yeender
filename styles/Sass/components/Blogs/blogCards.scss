@@ -1,11 +1,17 @@
-@import '../../utilities/variables';
+@import "../../utilities/variables";
+
 
 #C_B_blogCard {
   .img_date {
-    img {
-      border-radius: 5px;
-      border: 2px solid $yellow;
-      width: 100%;
+    .img {
+      height: 180px;
+      img {
+        border-radius: 5px;
+        border: 2px solid $yellow;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
     h5 {
       position: relative;
@@ -55,4 +61,10 @@
       }
     }
   }
+}
+
+.blogs_list_title{
+  font-family: "Poppins", "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  color: #1f4262;
 }

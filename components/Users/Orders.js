@@ -16,14 +16,6 @@ const ITEM_HEIGHT = 48;
 const Orders = () => {
     const { service, setService } = React.useContext(UserContext);
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
 
     return (
         <div id="p_orders_area">
@@ -33,40 +25,6 @@ const Orders = () => {
                     {service.map((data, index) => (
                         <Col lg="4" md="6" sm="6" key={index}>
                             <div id="service_card_patent_style" className="card text-center">
-                                <div>
-                                    <IconButton
-                                        aria-label="more"
-                                        id="long-button"
-                                        aria-controls="long-menu"
-                                        aria-expanded={open ? 'true' : undefined}
-                                        aria-haspopup="true"
-                                        onClick={handleClick}
-                                    >
-                                        <MoreVertIcon />
-                                    </IconButton>
-                                    <Menu
-                                        id="long-menu"
-                                        MenuListProps={{
-                                            'aria-labelledby': 'long-button',
-                                        }}
-                                        anchorEl={anchorEl}
-                                        open={open}
-                                        onClose={handleClose}
-                                        PaperProps={{
-                                            style: {
-                                                maxHeight: ITEM_HEIGHT * 4.5,
-                                                width: '20ch',
-                                                // boxShadow: 'none',
-                                            },
-                                        }}
-                                    >
-                                        {options.map((option) => (
-                                            <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-                                                {option}
-                                            </MenuItem>
-                                        ))}
-                                    </Menu>
-                                </div>
 
                                 <div style={{ background: '#DCDEFF' }}>
                                     <img
@@ -81,13 +39,55 @@ const Orders = () => {
 
                                 <div className="btns">
                                     <button className="btn btn-primary mr-1">pending</button>
-                                    <button className="btn btn-success ml-1">details</button>
+                                    <button
+                                        className="btn btn-success ml-1"
+                                        type="button"
+                                        data-mdb-toggle="modal"
+                                        data-mdb-target={`#staticBackdrop${index}`}
+                                    >
+                                        details
+                                    </button>
+                                    {/* <button className="btn btn-danger ml-2">delate</button> */}
                                 </div>
 
                                 <div className="dates">
                                     <h5><span>Lest date:</span> 10/04/2021</h5>
                                 </div>
                             </div>
+
+                            {/* <!-- Modal --> */}
+                            <div
+                                className="modal fade"
+                                id={`staticBackdrop${index}`}
+                                data-mdb-backdrop="static"
+                                data-mdb-keyboard="false"
+                                tabIndex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h5 className="modal-title" id="staticBackdropLabel">{data.title ? data.title : "..."}</h5>
+                                            <button
+                                                type="button"
+                                                className="btn-close"
+                                                data-mdb-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div className="modal-body">...</div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary" data-mdb-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="button" className="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* <!-- Modal --> */}
+                            
                         </Col>
                     ))}
                 </Row>

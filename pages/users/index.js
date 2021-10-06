@@ -1,5 +1,7 @@
 import React from 'react';
+import Blogs from '../../components/Users/Blogs';
 import Orders from '../../components/Users/Orders';
+import Review from '../../components/Users/Review';
 import Header from '../../components/Users/USHeader';
 import { UserContext } from '../../Layout/Layout';
 
@@ -82,10 +84,10 @@ const Users = () => {
                             <Orders/>
                         </div>
                         <div className="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                            Tab 2 content
+                           <Blogs/>
                         </div>
                         <div className="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                            Tab 3 content
+                            <Review/>
                         </div>
                     </div>
                     {/* <!-- Tabs content --> */}

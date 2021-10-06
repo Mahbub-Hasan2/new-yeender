@@ -1,16 +1,11 @@
+/* eslint-disable @next/next/link-passhref */
 import Avatar from '@mui/material/Avatar';
 import Link from "next/link";
 import React from 'react';
 import { UserContext } from '../../Layout/Layout';
 
 const BlogCards = ({ blogs }) => {
-    const [expanded, setExpanded] = React.useState(false);
-    const [blogFavorite, setBlogFavorite] = React.useState(false);
     const { categories, setCategories } = React.useContext(UserContext);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
 
     return (
@@ -23,7 +18,7 @@ const BlogCards = ({ blogs }) => {
                     else if (blog.categorie.toLowerCase().includes(categories.toLowerCase())) {
                         return categories
                     }
-                    else if (blog.description.toLowerCase().includes(categories.toLowerCase())){
+                    else if (blog.description.toLowerCase().includes(categories.toLowerCase())) {
                         return categories
                     }
                 }).map((data, index) => (
@@ -32,8 +27,9 @@ const BlogCards = ({ blogs }) => {
                             <div className="card h-100">
                                 {/* {console.log(data, data.tags)} */}
                                 <div className="img_date">
-                                    <img className="img-fluid" src={data.img ? data.img : "https://i.imgur.com/LirzrRm.png"} />
-                                    <h5>12 <br /> Dec</h5>
+                                    <div className="img">
+                                        <img className="img-fluid" src={data.img ? data.img : "https://i.imgur.com/LirzrRm.png"} />
+                                    </div>                                    <h5>12 <br /> Dec</h5>
                                 </div>
 
                                 <div className="card_content card-body">
